@@ -22,10 +22,25 @@ int main()
     FILE *input1;
 
     inputFile = fopen("input", "r");
+    if (inputFile == NULL)
+    {
+        printf("input file opening failed");
+        return 0;
+    }
     outputFileTable = fopen("output.txt", "w");
+    if (outputFileTable == NULL)
+    {
+        printf("output file opening failed");
+        return 0;
+    }
     outputFileBinary = fopen("outputBinary.bin", "wb");
+    if (outputFileBinary == NULL)
+    {
+        printf("output binary file opening for writing failed");
+        return 0;
+    }
 
-    fscanf(inputFile, "%lf %lf %lf %lf %s %s %s", &startX, &endX, &dotCount, &deltaX, Group, Name, Name);
+    fscanf(inputFile, "%lf %lf %lf %lf %s %s %s", &startX, &endX, &dotCount, &deltaX, Group, Name, Surname);
 
     printf("%lf, %lf, %lf, %lf, %s, %s, %s", startX, endX, dotCount, deltaX, Group, Name, Surname);
     printTable(outputFileTable, startX, endX, dotCount, deltaX);
@@ -35,6 +50,11 @@ int main()
 
     fclose(outputFileBinary);
     outputFileBinary = fopen("outputBinary.bin", "rb");
+    if (outputFileBinary == NULL)
+    {
+        printf("output binary file opening for reading failed");
+        return 0;
+    }
 
     readFile(outputFileBinary);
 
