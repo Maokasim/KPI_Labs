@@ -1,5 +1,6 @@
 ДКР з інформатики, виконав студентр РЕ-31 Таляр Максим. Варіант 24
 
+
 TASK 1
 
 ![image](https://github.com/Maokasim/KPI_Labs/assets/77733487/e51ee178-7b2e-45cc-bd62-43a3318f3667)
