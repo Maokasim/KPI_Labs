@@ -1,0 +1,2 @@
+This is example of input file for third task lets enter some digits and symbols together ten of ones111111*1/111 eleven of fives#5555!555+5-55=5 
+twelve of six 666666666666 and twenty of three 33333333333333333333
